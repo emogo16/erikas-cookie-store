@@ -3,7 +3,7 @@ import NewCookieForm from "./NewCookieForm";
 import CookieList from "./CookieList";
 import CookieDetail from "./CookieDetail";
 import EditCookieForm from "./EditCookieForm";
-import data from "../mock-data.json";
+import data from "../fake-data.json";
 
 class CookieControl extends React.Component {
   constructor(props) {
@@ -32,7 +32,7 @@ class CookieControl extends React.Component {
     }
   };
 
-  handleSellClick = (CookieId) => {
+  handleSellClick = (cookieId) => {
     const newMainCookieList = this.state.mainCookieList.map((element) => {
       if (element.id === cookieId && element.batchesRemaining >= 1) {
         const cookie = {

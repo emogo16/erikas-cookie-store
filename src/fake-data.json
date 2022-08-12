@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Snickerdoodles",
+    "flavor": "Help yourself to one of our soft cinnamon-sugared cookies and see for yourself.",
+    "price": "3.00",
+    "batchesRemaining": 60,
+    "batchesSold": 70,
+    "id": "4"
+  },
+  {
+    "name": "Monster Cookies",
+    "flavor": "This recipe combines several favorite flavors—peanut butter, butterscotch and chocolate—in one big cookie.",
+    "price": "2.00",
+    "batchesRemaining": 100,
+    "batchesSold": 30,
+    "id": "1"
+  },
+  {
+    "name": "Gingerbread Cookies",
+    "flavor": "No holiday treat platter would be complete without gingerbread cutout cookies!",
+    "price": "4.00",
+    "batchesRemaining": 90,
+    "batchesSold": 40,
+    "id": "2"
+  }
+]

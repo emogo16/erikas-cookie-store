@@ -9,7 +9,7 @@ function EditCookieForm(props) {
     event.preventDefault();
     props.onEditCookie({
       name: event.target.name.value,
-      flavor: event.target.brand.value,
+      flavor: event.target.flavor.value,
       price: event.target.price.value,
       batchesRemaining: event.target.batchesRemaining.value,
       batchesSold: event.target.batchesSold.value,
