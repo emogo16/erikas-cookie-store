@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 import ReusableForm from "./ReusableForm";
 
 function NewCookieForm(props) {
-  function newCookieFormSubmission(event) {
+  function handleNewCookieFormSubmission(event) {
     event.preventDefault();
     props.onNewCookieCreation({
       name: event.target.name.value,
@@ -23,7 +23,7 @@ function NewCookieForm(props) {
   return (
     <React.Fragment>
       <ReusableForm
-        formSubmissionHandler={newCookieFormSubmission}
+        formSubmissionHandler={handleNewCookieFormSubmission}
         buttonText="Add Cookie"
       />
     </React.Fragment>

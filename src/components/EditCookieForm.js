@@ -5,7 +5,7 @@ import PropTypes from "prop-types";
 function EditCookieForm(props) {
   const { cookie } = props;
 
-  function editCookieFormSubmission(event) {
+  function handleEditCookieFormSubmission(event) {
     event.preventDefault();
     props.onEditCookie({
       name: event.target.name.value,
@@ -20,9 +20,8 @@ function EditCookieForm(props) {
   return (
     <React.Fragment>
       <ReusableForm
-        formSubmissionHandler={editCookieFormSubmission}
-        buttonText="Update Cookie"
-      />
+        formSubmissionHandler={handleEditCookieFormSubmission}
+        buttonText="Update Cookie"/>
     </React.Fragment>
   );
 }

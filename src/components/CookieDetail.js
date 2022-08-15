@@ -2,33 +2,21 @@ import React from "react";
 import PropTypes from "prop-types";
 
 function CookieDetail(props) {
-  const { cookie, onClickingDelete } = props;
-
+  const { cookie, onClickingDelete, onClickingBuy } = props;
   return (
     <React.Fragment>
       <h1>Cookie info</h1>
-      <table>
-        <thead>
-          <tr>
-            <th>Name</th>
-            <th>Flavor</th>
-            <th>Price</th>
-            <th>Batches Remaining</th>
-            <th>Batches Sold</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr className="table-light">
-            <td>{cookie.name}</td>
-            <td>{cookie.flavor}</td>
-            <td>{cookie.price}</td>
-            <td>{cookie.batchesRemaining}</td>
-            <td>{cookie.batchesSold}</td>
-          </tr>
-        </tbody>
-      </table>
-      <button onClick={props.onClickingEdit}>Update Cookie</button>
-      <button onClick={() => onClickingDelete(cookie.id)}>Delete Cookie</button>
+      <h3>{cookie.name} - ${cookie.price}.00 </h3>
+      <p><b>Type:</b> <em>{cookie.blend}</em></p>
+      <p><b>Origin:</b> <em>{cookie.origin}</em></p>
+      <p>{cookie.quantity} ounces available</p>
+      <p>{cookie.crate} crates in stock</p>
+      <button onClick={() => onClickingBuy(cookie.id) }>Buy Item</button>
+      <br></br>
+      <br></br>
+      <button onClick={ props.onClickingEdit }>Update Item</button>
+      <br></br>
+      <button onClick={() => onClickingDelete(cookie.id) }>Delete Item</button>
       <hr />
     </React.Fragment>
   );
@@ -38,6 +26,7 @@ CookieDetail.propTypes = {
   ticket: PropTypes.object,
   onClickingDelete: PropTypes.func,
   onClickingEdit: PropTypes.func,
+  onClickingBuy: PropTypes.func
 };
 
 export default CookieDetail;

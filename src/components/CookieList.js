@@ -1,51 +1,31 @@
 import PropTypes from "prop-types";
 import React from "react";
+import Cookie from './Cookie'
 
 function CookieList(props) {
-  const { onBatchesClicked, onCookieSelection } = props;
   return (
     <React.Fragment>
       <hr />
-      <table>
-        <thead>
-          <tr>
-            <th>Name</th>
-            <th>Description</th>
-            <th>Price</th>
-            <th>Batches Remaining</th>
-            <th>Batches Sold</th>
-            <th>Sell A Batch</th>
-            <th>Details</th>
-          </tr>
-        </thead>
-        <tbody>
-          {/* {props.cookieList.map((cookie) => (
-            <tr>
-              <td>{cookie.name}</td>
-              <td>{cookie.description}</td>
-              <td>{cookie.price}</td>
-              <td>{cookie.batchesRemaining}</td>
-              <td>{cookie.batchesSold}</td>
-              <td>
-                <button onClick={() => onBatchesClicked(cookie.id)}>
-                  Sell Batch
-                </button>
-              </td>
-              <td>
-                <button onClick={() => onCookieSelection(cookie.id)}>Details</button>
-              </td>
-            </tr>
-          ))} */}
-        </tbody>
-      </table>
+      {props.cookieList.map((cookie) => 
+        <Cookie 
+          whenCookieClicked={props.onCookieSelection}
+          name={cookie.name}
+          origin={cookie.origin}
+          price={cookie.price}
+          blend={cookie.blend}
+          quantity={cookie.quantity}
+          crate={cookie.crate}
+          id={cookie.id}
+          key={cookie.id} />
+        )}
     </React.Fragment>
   );
 }
 
+
 CookieList.propTypes = {
   cookieList: PropTypes.array,
-  onCookieSelection: PropTypes.func,
-  onBatchesClicked: PropTypes.func,
+  onCookieSelection: PropTypes.func
 };
 
 export default CookieList;
