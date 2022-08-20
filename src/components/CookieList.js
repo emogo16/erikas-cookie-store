@@ -12,9 +12,8 @@ function CookieList(props) {
           name={cookie.name}
           origin={cookie.origin}
           price={cookie.price}
-          blend={cookie.blend}
+          flavor={cookie.flavor}
           quantity={cookie.quantity}
-          crate={cookie.crate}
           id={cookie.id}
           key={cookie.id} />
         )}

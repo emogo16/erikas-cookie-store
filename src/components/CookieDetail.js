@@ -7,10 +7,9 @@ function CookieDetail(props) {
     <React.Fragment>
       <h1>Cookie info</h1>
       <h3>{cookie.name} - ${cookie.price}.00 </h3>
-      <p><b>Type:</b> <em>{cookie.blend}</em></p>
+      <p><b>Type:</b> <em>{cookie.flavor}</em></p>
       <p><b>Origin:</b> <em>{cookie.origin}</em></p>
-      <p>{cookie.quantity} ounces available</p>
-      <p>{cookie.crate} crates in stock</p>
+      <p>{cookie.quantity} batches available</p>
       <button onClick={() => onClickingBuy(cookie.id) }>Buy Item</button>
       <br></br>
       <br></br>

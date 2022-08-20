@@ -5,8 +5,8 @@ function Cookie(props) {
   return (
     <React.Fragment>
       <div onClick = {() => props.whenCookieClicked(props.id)}>
-        <h3>{props.name} - $ {props.price}.00 per Oz</h3>
-        <p>Type: {props.blend}</p>
+        <h3>{props.name} - $ {props.price}.00 per cookie</h3>
+        <p>Type: {props.flavor}</p>
         <hr />
       </div>
     </React.Fragment>

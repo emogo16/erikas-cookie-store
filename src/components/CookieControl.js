@@ -58,7 +58,7 @@ class CookieControl extends React.Component {
     });
   }
 
-  handleChangingselectedCookie = (id) => {
+  handleChangingSelectedCookie = (id) => {
     const selectedCookie = this.state.mainCookieList.filter
       (cookie => cookie.id === id)[0];
     this.setState({ selectedCookie: selectedCookie 
@@ -121,7 +121,7 @@ class CookieControl extends React.Component {
     else if (this.state.formVisibleOnPage) {
       currentlyVisibleState = 
         <NewCookieForm 
-        onNewCookieCreation={this.handleAddingnewCookieToList} />;
+        onNewCookieCreation={this.handleAddingNewCookieToList} />;
         buttonText="Return to Cookie List";
     } else {
       currentlyVisibleState = 
