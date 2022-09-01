@@ -10,9 +10,9 @@ function EditCookieForm(props) {
     props.onEditCookie({
       name: event.target.name.value,
       flavor: event.target.flavor.value,
-      price: event.target.price.value,
-      batchesRemaining: event.target.batchesRemaining.value,
-      batchesSold: event.target.batchesSold.value,
+      price: parseInt(event.target.price.value),
+      batchesRemaining: parseInt(100),
+      batchesSold: parseInt(30),
       id: cookie.id,
     });
   }
