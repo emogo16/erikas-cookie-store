@@ -1,4 +1,4 @@
- ![Wireframe](src/img/Flowchart2.png) 
+ ![Wireframe](src/img/Lastdraft.png) 
 
 # Erika's Cookie Store
 
